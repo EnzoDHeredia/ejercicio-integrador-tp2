@@ -12,8 +12,4 @@ public class MatriculaServiceImpl implements MatriculaService {
 
     }
 
-    @Override
-    public List<Estudiante> findEstudiantesByCarreraAndCiudad(String carrera, String ciudad) {
-        return List.of();
-    }
 }

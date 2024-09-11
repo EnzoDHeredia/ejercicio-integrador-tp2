@@ -1,14 +1,28 @@
 package main.service.impl;
 
 import main.entity.Carrera;
+import main.repository.CarreraRepository;
 import main.service.CarreraService;
+import main.util.ConnectionFactory;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 public class CarreraServiceImpl implements CarreraService {
+
+    private EntityManager em;
+    private CarreraRepository repositorio;
+
+    public CarreraServiceImpl(EntityManager em) {
+        this.em = em;
+        repositorio = new CarreraRepository(em);
+    }
+
     @Override
     public void save(Carrera carrera) {
-
+        em.getTransaction().begin();
+        em.persist(carrera);
+        em.getTransaction().commit();
     }
 
     @Override

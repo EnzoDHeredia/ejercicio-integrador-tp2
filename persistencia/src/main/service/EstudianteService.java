@@ -8,4 +8,5 @@ public interface EstudianteService {
     List<Estudiante> findAllOrderedByApellido();
     Estudiante findByLibretaUniversitaria(String numeroLibretaUniversitaria);
     List<Estudiante> findByGenero(String genero);
+    List<Estudiante> findEstudiantesByCarreraAndCiudad(String carrera, String ciudad);
 }
