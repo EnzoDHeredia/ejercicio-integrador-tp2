@@ -1,10 +1,9 @@
-package main.service.impl;
+package main.java.service.impl;
 
-import main.entity.Estudiante;
-import main.repository.CarreraRepository;
-import main.repository.EstudianteRepository;
-import main.service.EstudianteService;
-import main.util.ConnectionFactory;
+import main.java.entity.Estudiante;
+import main.java.repository.CarreraRepository;
+import main.java.repository.EstudianteRepository;
+import main.java.service.EstudianteService;
 
 import javax.persistence.EntityManager;
 import java.util.List;

@@ -1,6 +1,6 @@
-package main.service;
+package main.java.service;
 
-import main.entity.Estudiante;
+import main.java.entity.Estudiante;
 import java.util.List;
 
 public interface EstudianteService {

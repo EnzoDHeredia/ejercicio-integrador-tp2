@@ -1,9 +1,8 @@
-package main.service.impl;
+package main.java.service.impl;
 
-import main.entity.Carrera;
-import main.repository.CarreraRepository;
-import main.service.CarreraService;
-import main.util.ConnectionFactory;
+import main.java.entity.Carrera;
+import main.java.repository.CarreraRepository;
+import main.java.service.CarreraService;
 
 import javax.persistence.EntityManager;
 import java.util.List;

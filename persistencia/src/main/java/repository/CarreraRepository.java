@@ -1,8 +1,8 @@
-package main.repository;
+package main.java.repository;
 
-import main.dto.CarreraInscriptosDTO;
-import main.dto.CarreraReporteDTO;
-import main.entity.Carrera;
+import main.java.dto.CarreraInscriptosDTO;
+import main.java.dto.CarreraReporteDTO;
+import main.java.entity.Carrera;
 
 import javax.persistence.EntityManager;
 import java.util.List;

@@ -1,9 +1,8 @@
-package main.repository;
+package main.java.repository;
 
-import main.entity.Matricula;
+import main.java.entity.Matricula;
 
 import javax.persistence.EntityManager;
-import java.util.List;
 
 public class MatriculaRepository {
 

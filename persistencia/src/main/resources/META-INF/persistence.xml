@@ -7,9 +7,9 @@
 
     <persistence-unit name="persistJPA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>main.entity.Estudiante</class>
-        <class>main.entity.Carrera</class>
-        <class>main.entity.Matricula</class>
+        <class>main.java.entity.Carrera</class>
+        <class>main.java.entity.Estudiante</class>
+        <class>main.java.entity.Matricula</class>
 
         <!-- Configuración de PostgreSQL -->
         <properties>

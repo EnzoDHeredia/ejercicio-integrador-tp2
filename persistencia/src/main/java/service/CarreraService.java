@@ -1,6 +1,6 @@
-package main.service;
+package main.java.service;
 
-import main.entity.Carrera;
+import main.java.entity.Carrera;
 import java.util.List;
 
 public interface CarreraService {

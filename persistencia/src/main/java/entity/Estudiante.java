@@ -1,4 +1,4 @@
-package main.entity;
+package main.java.entity;
 
 import javax.persistence.*;
 import java.util.List;
@@ -14,7 +14,11 @@ public class Estudiante {
     private Integer edad;
     private String genero;
     private String documento;
+
+    @Column(name = "ciudad_residencia")
     private String ciudadResidencia;
+
+    @Column(name = "numero_libreta_universitaria")
     private String numeroLibretaUniversitaria;
 
     @OneToMany(mappedBy = "estudiante", cascade = CascadeType.ALL)

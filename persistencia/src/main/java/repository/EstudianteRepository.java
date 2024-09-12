@@ -1,7 +1,7 @@
-package main.repository;
+package main.java.repository;
 
-import main.dto.EstudianteCarreraDTO;
-import main.entity.Estudiante;
+import main.java.dto.EstudianteCarreraDTO;
+import main.java.entity.Estudiante;
 
 import javax.persistence.EntityManager;
 import java.util.List;
