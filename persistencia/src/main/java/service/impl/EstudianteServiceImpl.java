@@ -4,12 +4,12 @@ import main.java.dto.EstudianteCarreraDTO;
 import main.java.entity.Estudiante;
 import main.java.repository.CarreraRepository;
 import main.java.repository.EstudianteRepository;
-import main.java.service.EstudianteService;
+import main.java.service.IEstudianteService;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
-public class EstudianteServiceImpl implements EstudianteService {
+public class EstudianteServiceImpl implements IEstudianteService {
 
     private EntityManager em;
     private CarreraRepository carreraRepo;

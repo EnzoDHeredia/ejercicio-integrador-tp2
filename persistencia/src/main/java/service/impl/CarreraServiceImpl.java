@@ -1,13 +1,15 @@
 package main.java.service.impl;
 
+import main.java.dto.CarreraInscriptosDTO;
+import main.java.dto.CarreraReporteDTO;
 import main.java.entity.Carrera;
 import main.java.repository.CarreraRepository;
-import main.java.service.CarreraService;
+import main.java.service.ICarreraService;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
-public class CarreraServiceImpl implements CarreraService {
+public class CarreraServiceImpl implements ICarreraService {
 
     private EntityManager em;
     private CarreraRepository repositorio;
@@ -23,12 +25,12 @@ public class CarreraServiceImpl implements CarreraService {
     }
 
     @Override
-    public List<Object[]> findCarrerasWithInscritos() {
-        return List.of();
+    public List<CarreraInscriptosDTO> findCarrerasWithInscritos() {
+        repositorio.findCarrerasWithInscritos();
     }
 
     @Override
-    public List<Object[]> generarReporteCarreras() {
-        return List.of();
+    public List<CarreraReporteDTO> obtenerReporteCarrerasPorAnio() {
+        repositorio.obtenerReporteCarrerasPorAnio();
     }
 }

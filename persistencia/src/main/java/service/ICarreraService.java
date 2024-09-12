@@ -1,10 +1,12 @@
 package main.java.service;
 
+import main.java.dto.CarreraInscriptosDTO;
+import main.java.dto.CarreraReporteDTO;
 import main.java.entity.Carrera;
 import java.util.List;
 
-public interface CarreraService {
+public interface ICarreraService {
     void save(Carrera carrera);
-    List<Object[]> findCarrerasWithInscritos();
-    List<Object[]> generarReporteCarreras();
+    List<CarreraInscriptosDTO> findCarrerasWithInscritos();
+    List<CarreraReporteDTO> obtenerReporteCarrerasPorAnio();
 }

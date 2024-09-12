@@ -4,8 +4,9 @@ import main.java.dto.EstudianteCarreraDTO;
 import main.java.entity.Carrera;
 import main.java.entity.Estudiante;
 import main.java.entity.Matricula;
-import main.java.service.CarreraService;
-import main.java.service.EstudianteService;
+import main.java.service.ICarreraService;
+import main.java.service.IEstudianteService;
+import main.java.service.IMatriculaService;
 import main.java.service.impl.CarreraServiceImpl;
 import main.java.service.impl.EstudianteServiceImpl;
 import main.java.util.ConnectionFactory;
@@ -17,8 +18,8 @@ public class Main {
     public static void main(String[] args) {
         EntityManager em = ConnectionFactory.getEntityManager();
 
-        CarreraService carreraService = new CarreraServiceImpl(em);
-        EstudianteService estudianteService = new EstudianteServiceImpl(em);
+        ICarreraService carreraService = new CarreraServiceImpl(em);
+        IEstudianteService estudianteService = new EstudianteServiceImpl(em);
 
         //List<Estudiante> e = estudianteService.findAllOrderedByApellido();
 

@@ -4,7 +4,7 @@ import main.java.dto.EstudianteCarreraDTO;
 import main.java.entity.Estudiante;
 import java.util.List;
 
-public interface EstudianteService {
+public interface IEstudianteService {
     void save(Estudiante estudiante);
     List<Estudiante> findAllOrderedByApellido();
     Estudiante findByLibretaUniversitaria(String numeroLibretaUniversitaria);
