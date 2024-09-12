@@ -2,6 +2,7 @@ package main.repository;
 
 import main.dto.CarreraInscriptosDTO;
 import main.dto.CarreraReporteDTO;
+import main.entity.Carrera;
 
 import javax.persistence.EntityManager;
 import java.util.List;
@@ -12,6 +13,12 @@ public class CarreraRepository {
 
     public CarreraRepository(EntityManager em) {
         this.em = em;
+    }
+
+    public void save(Carrera carrera) {
+        em.getTransaction().begin();
+        em.persist(carrera);
+        em.getTransaction().commit();
     }
 
     public List<CarreraInscriptosDTO> obtenerCarrerasOrdenadasPorInscriptos() {

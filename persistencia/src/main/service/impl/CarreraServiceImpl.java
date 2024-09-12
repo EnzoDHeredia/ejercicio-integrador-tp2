@@ -20,9 +20,7 @@ public class CarreraServiceImpl implements CarreraService {
 
     @Override
     public void save(Carrera carrera) {
-        em.getTransaction().begin();
-        em.persist(carrera);
-        em.getTransaction().commit();
+        repositorio.save(carrera);
     }
 
     @Override
