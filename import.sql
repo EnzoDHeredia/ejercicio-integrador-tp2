@@ -49,6 +49,41 @@ INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_resid
 VALUES ('Natalia', 'Cabrera', 27, 'F', '78912345', 'Corrientes', 'LU016');
 INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
 VALUES ('Marcos', 'Ortiz', 30, 'M', '78923456', 'Santa Rosa', 'LU017');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Martín', 'Gómez', 22, 'M', '34567890', 'Buenos Aires', 'LU018');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Carla', 'Méndez', 21, 'F', '45678901', 'Córdoba', 'LU019');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Fernando', 'Pérez', 23, 'M', '56789012', 'Rosario', 'LU020');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Beatriz', 'López', 24, 'F', '67890123', 'Mendoza', 'LU021');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Esteban', 'García', 20, 'M', '78901234', 'La Plata', 'LU022');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Gabriela', 'Morales', 22, 'F', '89012345', 'Mar del Plata', 'LU023');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Javier', 'Castro', 19, 'M', '90123456', 'San Miguel de Tucumán', 'LU024');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Verónica', 'Figueroa', 21, 'F', '01234567', 'Neuquén', 'LU025');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Héctor', 'López', 23, 'M', '23456789', 'Salta', 'LU026');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Mónica', 'Vázquez', 24, 'F', '34567890', 'Bahía Blanca', 'LU027');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Alberto', 'Romero', 25, 'M', '45678901', 'Jujuy', 'LU028');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Mariana', 'Alonso', 26, 'F', '56789012', 'San Juan', 'LU029');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Jorge', 'Pardo', 28, 'M', '67890123', 'San Luis', 'LU030');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Natalia', 'Cano', 22, 'F', '78901234', 'Santa Fe', 'LU031');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Lucas', 'Núñez', 29, 'M', '89012345', 'Posadas', 'LU032');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Silvia', 'Maldonado', 27, 'F', '90123456', 'Corrientes', 'LU033');
+INSERT INTO estudiante (nombres, apellido, edad, genero, documento, ciudad_residencia, numero_libreta_universitaria)
+VALUES ('Adrián', 'Salazar', 30, 'M', '01234567', 'Santa Rosa', 'LU034');
+
 
 -- Datos de Matrículas
 INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
@@ -85,3 +120,37 @@ INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
 VALUES (16, 10, 3, false);  -- Natalia en Psicología
 INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
 VALUES (17, 9, 6, true);   -- Marcos en Economía, graduado
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (18, 1, 1, false);  -- Martín en Ingeniería de Sistemas
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (19, 2, 2, true);  -- Carla en Ingeniería Civil, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (20, 3, 3, false);  -- Fernando en Licenciatura en Matemáticas
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (21, 4, 4, false);  -- Beatriz en Arquitectura
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (22, 5, 5, true);   -- Esteban en Ciencias de la Computación, graduado
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (23, 6, 2, false);  -- Gabriela en Química
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (24, 7, 3, false);  -- Javier en Filosofía
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (25, 8, 4, true);   -- Verónica en Ciencias Políticas, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (26, 9, 2, false);  -- Héctor en Economía
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (27, 10, 3, true);  -- Mónica en Psicología, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (28, 1, 4, false);  -- Alberto en Ingeniería de Sistemas
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (29, 2, 2, false);  -- Mariana en Ingeniería Civil
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (30, 3, 1, true);   -- Jorge en Licenciatura en Matemáticas, graduado
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (31, 4, 2, false);  -- Natalia en Arquitectura
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (32, 10, 4, false);  -- Lucas en Psicología
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (33, 8, 1, true);   -- Silvia en Ciencias Políticas, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+VALUES (34, 9, 2, false);  -- Adrián en Economía

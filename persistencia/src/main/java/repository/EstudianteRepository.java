@@ -20,13 +20,35 @@ public class EstudianteRepository {
         em.getTransaction().commit();
     }
 
-    public List<EstudianteCarreraDTO> obtenerEstudiantesPorCarreraYCiudad(String nombreCarrera, String ciudad) {
-        String jpql = "SELECT new com.ejemplo.registro.dto.EstudianteCarreraDTO(e.nombres, e.apellido, e.ciudadResidencia, c.nombre) " +
-                "FROM Estudiante e JOIN e.inscripciones i JOIN i.carrera c " +
+    public List<Estudiante> findAllOrderedByApellido(){
+        String jpql = "SELECT e FROM Estudiante e ORDER BY e.apellido ASC";
+        return em.createQuery(jpql, Estudiante.class).getResultList();
+    }
+
+    public Estudiante findByLibretaUniversitaria(String numeroLibretaUniversitaria){
+        String jpql = "SELECT e FROM Estudiante e WHERE e.numeroLibretaUniversitaria = :numeroLibretaUniversitaria";
+        return em.createQuery(jpql, Estudiante.class)
+                .setParameter("numeroLibretaUniversitaria", numeroLibretaUniversitaria)
+                .getSingleResult();
+    }
+
+    public List<Estudiante> findByGenero(String genero){
+        String jpql = "SELECT e FROM Estudiante e WHERE e.genero = :genero";
+        return em.createQuery(jpql, Estudiante.class)
+                .setParameter("genero", genero)
+                .getResultList();
+    }
+
+    public List<EstudianteCarreraDTO> findEstudiantesByCarreraAndCiudad(String nombreCarrera, String ciudad) {
+        String jpql = "SELECT new main.java.dto.EstudianteCarreraDTO(e.nombres, e.apellido, e.ciudadResidencia, c.nombre) " +
+                "FROM Matricula m " +
+                "JOIN m.estudiante e " +
+                "JOIN m.carrera c " +
                 "WHERE c.nombre = :nombreCarrera AND e.ciudadResidencia = :ciudad";
         return em.createQuery(jpql, EstudianteCarreraDTO.class)
                 .setParameter("nombreCarrera", nombreCarrera)
                 .setParameter("ciudad", ciudad)
                 .getResultList();
     }
+
 }

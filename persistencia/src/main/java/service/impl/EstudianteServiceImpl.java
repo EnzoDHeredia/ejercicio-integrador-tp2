@@ -1,5 +1,6 @@
 package main.java.service.impl;
 
+import main.java.dto.EstudianteCarreraDTO;
 import main.java.entity.Estudiante;
 import main.java.repository.CarreraRepository;
 import main.java.repository.EstudianteRepository;
@@ -27,21 +28,21 @@ public class EstudianteServiceImpl implements EstudianteService {
 
     @Override
     public List<Estudiante> findAllOrderedByApellido() {
-        return List.of();
+        return estudianteRepo.findAllOrderedByApellido();
     }
 
     @Override
     public Estudiante findByLibretaUniversitaria(String numeroLibretaUniversitaria) {
-        return null;
+        return estudianteRepo.findByLibretaUniversitaria(numeroLibretaUniversitaria);
     }
 
     @Override
     public List<Estudiante> findByGenero(String genero) {
-        return List.of();
+        return estudianteRepo.findByGenero(genero);
     }
 
     @Override
-    public List<Estudiante> findEstudiantesByCarreraAndCiudad(String carrera, String ciudad) {
-        return List.of();
+    public List<EstudianteCarreraDTO> findEstudiantesByCarreraAndCiudad(String carrera, String ciudad) {
+        return estudianteRepo.findEstudiantesByCarreraAndCiudad(carrera,ciudad);
     }
 }

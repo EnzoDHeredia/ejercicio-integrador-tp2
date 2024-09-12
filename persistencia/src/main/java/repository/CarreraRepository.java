@@ -21,7 +21,7 @@ public class CarreraRepository {
         em.getTransaction().commit();
     }
 
-    public List<CarreraInscriptosDTO> obtenerCarrerasOrdenadasPorInscriptos() {
+    public List<CarreraInscriptosDTO> findCarrerasWithInscritos() {
         String jpql = "SELECT new com.ejemplo.registro.dto.CarreraInscriptosDTO(c.nombre, COUNT(i)) " +
                 "FROM Carrera c JOIN c.inscripciones i " +
                 "GROUP BY c.nombre " +

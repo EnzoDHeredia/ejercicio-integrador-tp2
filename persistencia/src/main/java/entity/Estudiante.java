@@ -107,5 +107,19 @@ public class Estudiante {
     public void setMatriculas(List<Matricula> matriculas) {
         this.matriculas = matriculas;
     }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "id=" + id +
+                ", nombres='" + nombres + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", genero='" + genero + '\'' +
+                ", documento='" + documento + '\'' +
+                ", ciudadResidencia='" + ciudadResidencia + '\'' +
+                ", numeroLibretaUniversitaria='" + numeroLibretaUniversitaria + '\'' +
+                '}';
+    }
 }
 

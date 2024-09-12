@@ -1,5 +1,6 @@
 package main.java.service;
 
+import main.java.dto.EstudianteCarreraDTO;
 import main.java.entity.Estudiante;
 import java.util.List;
 
@@ -8,5 +9,5 @@ public interface EstudianteService {
     List<Estudiante> findAllOrderedByApellido();
     Estudiante findByLibretaUniversitaria(String numeroLibretaUniversitaria);
     List<Estudiante> findByGenero(String genero);
-    List<Estudiante> findEstudiantesByCarreraAndCiudad(String carrera, String ciudad);
+    List<EstudianteCarreraDTO> findEstudiantesByCarreraAndCiudad(String carrera, String ciudad);
 }
