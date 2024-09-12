@@ -1,6 +1,7 @@
 package main.java.entity;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 public class Matricula {
@@ -16,16 +17,18 @@ public class Matricula {
     @JoinColumn(name = "carrera_id")
     private Carrera carrera;
 
-    private Integer antiguedad; // años de estudio
+    @Column(name = "fecha_inscripcion")
+    private LocalDate fechaInscripcion; // años de estudio
+
     private Boolean graduado; // true si está graduado
 
     //Construtor
     public Matricula() {
     }
 
-    public Matricula(Boolean graduado, Integer antiguedad, Carrera carrera, Estudiante estudiante) {
+    public Matricula(Boolean graduado, LocalDate fechaInscripcion, Carrera carrera, Estudiante estudiante) {
         this.graduado = graduado;
-        this.antiguedad = antiguedad;
+        this.fechaInscripcion = fechaInscripcion;
         this.carrera = carrera;
         this.estudiante = estudiante;
     }
@@ -43,12 +46,12 @@ public class Matricula {
         this.graduado = graduado;
     }
 
-    public Integer getAntiguedad() {
-        return antiguedad;
+    public LocalDate getInscripcion() {
+        return fechaInscripcion;
     }
 
-    public void setAntiguedad(Integer antiguedad) {
-        this.antiguedad = antiguedad;
+    public void setInscripcion(LocalDate inscripcion) {
+        this.fechaInscripcion = inscripcion;
     }
 
     public Carrera getCarrera() {

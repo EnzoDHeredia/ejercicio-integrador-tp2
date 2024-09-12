@@ -86,71 +86,73 @@ VALUES ('Adrián', 'Salazar', 30, 'M', '01234567', 'Santa Rosa', 'LU034');
 
 
 -- Datos de Matrículas
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (1, 1, 2, false);  -- Juan en Ingeniería de Sistemas
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (2, 2, 3, false);  -- Ana en Ingeniería Civil
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (3, 3, 1, false);  -- Luis en Licenciatura en Matemáticas
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (4, 4, 4, true);   -- María en Arquitectura, graduada
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (5, 5, 1, false);  -- Carlos en Ciencias de la Computación
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (6, 6, 2, false);  -- Sofía en Química
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (7, 7, 3, false);  -- Andrés en Filosofía
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (8, 8, 4, true);   -- Laura en Ciencias Políticas, graduada
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (9, 9, 1, false);  -- Diego en Economía
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (10, 10, 3, false);  -- Paula en Psicología
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (11, 1, 2, false);  -- Gabriel en Ingeniería de Sistemas
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (12, 2, 4, true);  -- Lucía en Ingeniería Civil, graduada
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (13, 3, 2, false);  -- Ricardo en Licenciatura en Matemáticas
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (14, 4, 3, false);  -- Julia en Arquitectura
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (15, 8, 5, true);  -- Santiago en Ciencias Políticas, graduado
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (16, 10, 3, false);  -- Natalia en Psicología
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (17, 9, 6, true);   -- Marcos en Economía, graduado
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (18, 1, 1, false);  -- Martín en Ingeniería de Sistemas
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (19, 2, 2, true);  -- Carla en Ingeniería Civil, graduada
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (20, 3, 3, false);  -- Fernando en Licenciatura en Matemáticas
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (21, 4, 4, false);  -- Beatriz en Arquitectura
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (22, 5, 5, true);   -- Esteban en Ciencias de la Computación, graduado
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (23, 6, 2, false);  -- Gabriela en Química
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (24, 7, 3, false);  -- Javier en Filosofía
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (25, 8, 4, true);   -- Verónica en Ciencias Políticas, graduada
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (26, 9, 2, false);  -- Héctor en Economía
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (27, 10, 3, true);  -- Mónica en Psicología, graduada
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (28, 1, 4, false);  -- Alberto en Ingeniería de Sistemas
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (29, 2, 2, false);  -- Mariana en Ingeniería Civil
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (30, 3, 1, true);   -- Jorge en Licenciatura en Matemáticas, graduado
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (31, 4, 2, false);  -- Natalia en Arquitectura
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (32, 10, 4, false);  -- Lucas en Psicología
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
-VALUES (33, 8, 1, true);   -- Silvia en Ciencias Políticas, graduada
-INSERT INTO matricula (estudiante_id, carrera_id, antiguedad, graduado)
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (1, 1, '2022-03-01', false);  -- Juan en Ingeniería de Sistemas
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (2, 2, '2021-09-15', false);  -- Ana en Ingeniería Civil
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (3, 3, '2023-01-10', false);  -- Luis en Licenciatura en Matemáticas
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (4, 4, '2019-04-20', true);   -- María en Arquitectura, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (5, 5, '2022-08-12', false);  -- Carlos en Ciencias de la Computación
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (6, 6, '2021-11-05', false);  -- Sofía en Química
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (7, 7, '2023-06-25', false);  -- Andrés en Filosofía
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (8, 8, '2018-12-30', true);   -- Laura en Ciencias Políticas, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (9, 9, '2022-02-14', false);  -- Diego en Economía
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (10, 10, '2020-07-22', false); -- Paula en Psicología
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (11, 1, '2022-04-01', false);  -- Gabriel en Ingeniería de Sistemas
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (12, 2, '2019-10-10', true);  -- Lucía en Ingeniería Civil, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (13, 3, '2023-03-15', false);  -- Ricardo en Licenciatura en Matemáticas
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (14, 4, '2022-06-22', false);  -- Julia en Arquitectura
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (15, 8, '2018-11-11', true);  -- Santiago en Ciencias Políticas, graduado
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (16, 10, '2021-05-19', false);  -- Natalia en Psicología
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (17, 9, '2018-02-20', true);   -- Marcos en Economía, graduado
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (18, 1, '2023-02-14', false);  -- Martín en Ingeniería de Sistemas
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (19, 2, '2022-01-11', true);  -- Carla en Ingeniería Civil, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (20, 3, '2021-08-22', false);  -- Fernando en Licenciatura en Matemáticas
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (21, 4, '2020-12-25', false);  -- Beatriz en Arquitectura
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (22, 5, '2018-10-05', true);   -- Esteban en Ciencias de la Computación, graduado
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (23, 6, '2023-07-15', false);  -- Gabriela en Química
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (24, 7, '2021-09-05', false);  -- Javier en Filosofía
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (25, 8, '2019-06-10', true);   -- Verónica en Ciencias Políticas, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (26, 9, '2022-11-22', false);  -- Héctor en Economía
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (27, 10, '2018-04-18', true);  -- Mónica en Psicología, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (28, 1, '2019-07-10', false);  -- Alberto en Ingeniería de Sistemas
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (29, 2, '2021-05-25', false);  -- Mariana en Ingeniería Civil
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (30, 3, '2018-12-01', true);   -- Jorge en Licenciatura en Matemáticas, graduado
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (31, 4, '2020-03-03', false);  -- Natalia en Arquitectura
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (32, 10, '2019-08-20', false);  -- Lucas en Psicología
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (33, 8, '2018-11-11', true);   -- Silvia en Ciencias Políticas, graduada
+INSERT INTO matricula (estudiante_id, carrera_id, fecha_inscripcion, graduado)
+VALUES (34, 9, '2022-09-25', false);  -- Adrián en Economía
+
 VALUES (34, 9, 2, false);  -- Adrián en Economía

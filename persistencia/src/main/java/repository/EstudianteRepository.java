@@ -26,10 +26,7 @@ public class EstudianteRepository {
     }
 
     public Estudiante findByLibretaUniversitaria(String numeroLibretaUniversitaria){
-        String jpql = "SELECT e FROM Estudiante e WHERE e.numeroLibretaUniversitaria = :numeroLibretaUniversitaria";
-        return em.createQuery(jpql, Estudiante.class)
-                .setParameter("numeroLibretaUniversitaria", numeroLibretaUniversitaria)
-                .getSingleResult();
+        return em.find(Estudiante.class, numeroLibretaUniversitaria);
     }
 
     public List<Estudiante> findByGenero(String genero){

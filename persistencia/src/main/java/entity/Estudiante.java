@@ -5,9 +5,10 @@ import java.util.List;
 
 @Entity
 public class Estudiante {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "numero_libreta_universitaria")
+    private String numeroLibretaUniversitaria;
 
     private String nombres;
     private String apellido;
@@ -17,9 +18,6 @@ public class Estudiante {
 
     @Column(name = "ciudad_residencia")
     private String ciudadResidencia;
-
-    @Column(name = "numero_libreta_universitaria")
-    private String numeroLibretaUniversitaria;
 
     @OneToMany(mappedBy = "estudiante", cascade = CascadeType.ALL)
     private List<Matricula> matriculas;
@@ -40,9 +38,6 @@ public class Estudiante {
     }
 
     // Getters y setters
-    public Long getId() {
-        return id;
-    }
 
     public String getNombres() {
         return nombres;
@@ -111,14 +106,13 @@ public class Estudiante {
     @Override
     public String toString() {
         return "Estudiante{" +
-                "id=" + id +
+                "numeroLibretaUniversitaria=" + numeroLibretaUniversitaria +
                 ", nombres='" + nombres + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", edad=" + edad +
                 ", genero='" + genero + '\'' +
                 ", documento='" + documento + '\'' +
                 ", ciudadResidencia='" + ciudadResidencia + '\'' +
-                ", numeroLibretaUniversitaria='" + numeroLibretaUniversitaria + '\'' +
                 '}';
     }
 }

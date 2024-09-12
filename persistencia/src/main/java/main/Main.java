@@ -33,12 +33,16 @@ public class Main {
             System.out.println(est);
         }*/
 
+        /*
         List<EstudianteCarreraDTO> estDto = estudianteService.findEstudiantesByCarreraAndCiudad("Ingeniería de Sistemas", "Jujuy");
-        System.out.println("Estudiante de  y de la ciudad : " + estDto);
+        System.out.println("Estudiante de  y de la ciudad : ");
+        */
 
-        for (EstudianteCarreraDTO est : estDto) {
+        /*
+        for (Estudiante est : e) {
             System.out.println(est);
         }
+         */
 
         /*
         Estudiante est = estudianteService.findByLibretaUniversitaria("LU014");

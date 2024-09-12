@@ -26,11 +26,11 @@ public class CarreraServiceImpl implements ICarreraService {
 
     @Override
     public List<CarreraInscriptosDTO> findCarrerasWithInscritos() {
-        repositorio.findCarrerasWithInscritos();
+        return repositorio.findCarrerasWithInscritos();
     }
 
     @Override
     public List<CarreraReporteDTO> obtenerReporteCarrerasPorAnio() {
-        repositorio.obtenerReporteCarrerasPorAnio();
+        return repositorio.obtenerReporteCarrerasPorAnio();
     }
 }
