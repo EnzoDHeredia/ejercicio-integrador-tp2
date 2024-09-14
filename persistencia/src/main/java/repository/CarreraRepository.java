@@ -1,8 +1,8 @@
 package main.java.repository;
 
 import main.java.dto.CarreraInscriptosDTO;
-import main.java.dto.CarreraReporteDTO;
 import main.java.entity.Carrera;
+import main.java.dto.EstudiantesInscriptosGraduadosDTO;
 
 import javax.persistence.EntityManager;
 import java.util.List;
@@ -23,19 +23,19 @@ public class CarreraRepository {
 
     //Recuperar las carreras con estudiantes inscriptos, y ordenar por cantidad de inscriptos.
     public List<CarreraInscriptosDTO> findCarrerasWithInscritos() {
-        String jpql = "SELECT new com.ejemplo.registro.dto.CarreraInscriptosDTO(c.nombre, COUNT(i)) " +
-                "FROM Carrera c JOIN c.inscripciones i " +
+        String jpql = "SELECT new main.java.dto.CarreraInscriptosDTO(c.nombre, COUNT(m)) " +
+                "FROM Carrera c JOIN c.matriculas m " +
                 "GROUP BY c.nombre " +
-                "ORDER BY COUNT(i) DESC";
+                "ORDER BY COUNT(m) DESC";
         return em.createQuery(jpql, CarreraInscriptosDTO.class).getResultList();
     }
 
-    public List<CarreraReporteDTO> obtenerReporteCarrerasPorAnio() {
-        String jpql = "SELECT new com.ejemplo.registro.dto.CarreraReporteDTO(c.nombre, YEAR(i.fechaInscripcion), COUNT(i), " +
-                "SUM(CASE WHEN i.graduado = true THEN 1 ELSE 0 END)) " +
-                "FROM Carrera c JOIN c.inscripciones i " +
-                "GROUP BY c.nombre, YEAR(i.fechaInscripcion) " +
-                "ORDER BY c.nombre, YEAR(i.fechaInscripcion)";
-        return em.createQuery(jpql, CarreraReporteDTO.class).getResultList();
+    public List<EstudiantesInscriptosGraduadosDTO> obtenerReporteInscriptosGraduadosCarrera() {
+        String jpql = "SELECT new main.java.dto.EstudiantesInscriptosGraduadosDTO(e.nombres, e.apellido, e.numeroLibretaUniversitaria, c.nombre, m.graduado, m.fechaInscripcion) " +
+                "FROM Matricula m " +
+                "JOIN m.estudiante e " +
+                "JOIN m.carrera c " +
+                "ORDER BY YEAR(m.fechaInscripcion) ASC, c.nombre ASC";
+        return em.createQuery(jpql, EstudiantesInscriptosGraduadosDTO.class).getResultList();
     }
 }

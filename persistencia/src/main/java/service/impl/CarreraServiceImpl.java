@@ -1,7 +1,7 @@
 package main.java.service.impl;
 
 import main.java.dto.CarreraInscriptosDTO;
-import main.java.dto.CarreraReporteDTO;
+import main.java.dto.EstudiantesInscriptosGraduadosDTO;
 import main.java.entity.Carrera;
 import main.java.repository.CarreraRepository;
 import main.java.service.ICarreraService;
@@ -30,7 +30,8 @@ public class CarreraServiceImpl implements ICarreraService {
     }
 
     @Override
-    public List<CarreraReporteDTO> obtenerReporteCarrerasPorAnio() {
-        return repositorio.obtenerReporteCarrerasPorAnio();
+    public List<EstudiantesInscriptosGraduadosDTO> obtenerReporteInscriptosGraduadosCarrera() {
+        return repositorio.obtenerReporteInscriptosGraduadosCarrera();
     }
+
 }
