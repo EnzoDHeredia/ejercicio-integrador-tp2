@@ -7,7 +7,7 @@ import main.java.dto.EstudiantesInscriptosGraduadosDTO;
 import javax.persistence.EntityManager;
 import java.util.List;
 
-public class CarreraRepository {
+public class CarreraRepository{
 
     private EntityManager em;
 
@@ -38,4 +38,5 @@ public class CarreraRepository {
                 "ORDER BY YEAR(m.fechaInscripcion) ASC, c.nombre ASC";
         return em.createQuery(jpql, EstudiantesInscriptosGraduadosDTO.class).getResultList();
     }
+
 }

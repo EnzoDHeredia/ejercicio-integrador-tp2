@@ -3,35 +3,32 @@ package main.java.service.impl;
 import main.java.dto.CarreraInscriptosDTO;
 import main.java.dto.EstudiantesInscriptosGraduadosDTO;
 import main.java.entity.Carrera;
-import main.java.repository.CarreraRepository;
 import main.java.service.ICarreraService;
-
-import javax.persistence.EntityManager;
+import main.java.util.AbstractFactory;
 import java.util.List;
 
 public class CarreraServiceImpl implements ICarreraService {
 
-    private EntityManager em;
-    private CarreraRepository repositorio;
 
-    public CarreraServiceImpl(EntityManager em) {
-        this.em = em;
-        repositorio = new CarreraRepository(em);
+    private AbstractFactory repositorio; //mas abs
+
+    public CarreraServiceImpl() {
+        repositorio = AbstractFactory.getFactory();
     }
 
     @Override
     public void save(Carrera carrera) {
-        repositorio.save(carrera);
+        repositorio.getCarreraRepository().save(carrera);
     }
 
     @Override
     public List<CarreraInscriptosDTO> findCarrerasWithInscritos() {
-        return repositorio.findCarrerasWithInscritos();
+        return repositorio.getCarreraRepository().findCarrerasWithInscritos();
     }
 
     @Override
     public List<EstudiantesInscriptosGraduadosDTO> obtenerReporteInscriptosGraduadosCarrera() {
-        return repositorio.obtenerReporteInscriptosGraduadosCarrera();
+        return repositorio.getCarreraRepository().obtenerReporteInscriptosGraduadosCarrera();
     }
 
 }
