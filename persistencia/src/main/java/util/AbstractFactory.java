@@ -6,25 +6,19 @@ import main.java.repository.MatriculaRepository;
 
 
 public abstract class AbstractFactory {
-    private static final String persistJPA = "persistJPA";
-
 
     public AbstractFactory(){
     }
 
     public static AbstractFactory getFactory(String type) {
-        if (type.equals(persistJPA)) {
+        if ("persistJPA".equalsIgnoreCase(type)) {
             return JPAFactory.getInstance();
-        } else if ("MySQL".equalsIgnoreCase(type)) {
+        } else if ("persistMySQL".equalsIgnoreCase(type)) {
             // Aquí podrías agregar la lógica para otras fábricas como MySQL, SQLite, etc.
             System.out.println("MySQL");
             return null;
         }
         throw new IllegalArgumentException("Tipo de fábrica no soportado: " + type);
-    }
-
-    public static AbstractFactory getFactory() {
-        return getFactory(persistJPA);
     }
 
     public abstract CarreraRepository getCarreraRepository();

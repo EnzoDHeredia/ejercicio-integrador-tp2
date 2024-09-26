@@ -12,8 +12,8 @@ public class EstudianteServiceImpl implements IEstudianteService {
 
     private AbstractFactory estudianteRepo;
 
-    public EstudianteServiceImpl() {
-        this.estudianteRepo = AbstractFactory.getFactory();
+    public EstudianteServiceImpl(String type) {
+        this.estudianteRepo = AbstractFactory.getFactory(type);
     }
 
     @Override
@@ -39,5 +39,15 @@ public class EstudianteServiceImpl implements IEstudianteService {
     @Override
     public List<EstudianteCarreraDTO> findEstudiantesByCarreraAndCiudad(String carrera, String ciudad) {
         return estudianteRepo.getEstudianteRepository().findEstudiantesByCarreraAndCiudad(carrera,ciudad);
+    }
+
+    @Override
+    public void deleteEstudiante(Estudiante estudiante) {
+        estudianteRepo.getEstudianteRepository().deleteEstudiante(estudiante);
+    }
+
+    @Override
+    public void updateEstudiante(Estudiante estudiante) {
+        estudianteRepo.getEstudianteRepository().updateEstudiante(estudiante);
     }
 }

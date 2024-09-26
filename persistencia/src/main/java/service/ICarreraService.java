@@ -9,4 +9,8 @@ public interface ICarreraService {
     void save(Carrera carrera);
     List<CarreraInscriptosDTO> findCarrerasWithInscritos();
     List<EstudiantesInscriptosGraduadosDTO> obtenerReporteInscriptosGraduadosCarrera();
+    List<Carrera> findAllCarreras();
+    void delete(Carrera carrera);
+    void update(Carrera carrera);
+    Carrera findCarreraById(int id);
 }

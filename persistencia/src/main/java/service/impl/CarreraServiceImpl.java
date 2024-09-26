@@ -12,8 +12,8 @@ public class CarreraServiceImpl implements ICarreraService {
 
     private AbstractFactory repositorio; //mas abs
 
-    public CarreraServiceImpl() {
-        repositorio = AbstractFactory.getFactory();
+    public CarreraServiceImpl(String type) {
+        repositorio = AbstractFactory.getFactory(type);
     }
 
     @Override
@@ -29,6 +29,26 @@ public class CarreraServiceImpl implements ICarreraService {
     @Override
     public List<EstudiantesInscriptosGraduadosDTO> obtenerReporteInscriptosGraduadosCarrera() {
         return repositorio.getCarreraRepository().obtenerReporteInscriptosGraduadosCarrera();
+    }
+
+    @Override
+    public List<Carrera> findAllCarreras() {
+        return repositorio.getCarreraRepository().findAllCarreras();
+    }
+
+    @Override
+    public void delete(Carrera carrera) {
+        repositorio.getCarreraRepository().delete(carrera);
+    }
+
+    @Override
+    public void update(Carrera carrera) {
+        repositorio.getCarreraRepository().update(carrera);
+    }
+
+    @Override
+    public Carrera findCarreraById(int id) {
+        return repositorio.getCarreraRepository().findCarreraById(id);
     }
 
 }

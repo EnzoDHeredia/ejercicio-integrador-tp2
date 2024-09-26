@@ -48,4 +48,15 @@ public class EstudianteRepository {
                 .getResultList();
     }
 
+    public void deleteEstudiante(Estudiante estudiante) {
+        em.getTransaction().begin();
+        em.remove(estudiante);
+        em.getTransaction().commit();
+    }
+
+    public void updateEstudiante(Estudiante estudiante){
+        em.getTransaction().begin();
+        em.merge(estudiante);
+        em.getTransaction().commit();
+    }
 }

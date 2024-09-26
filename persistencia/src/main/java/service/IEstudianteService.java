@@ -10,4 +10,6 @@ public interface IEstudianteService {
     Estudiante findByLibretaUniversitaria(String numeroLibretaUniversitaria);
     List<Estudiante> findByGenero(String genero);
     List<EstudianteCarreraDTO> findEstudiantesByCarreraAndCiudad(String carrera, String ciudad);
+    void deleteEstudiante(Estudiante estudiante);
+    void updateEstudiante(Estudiante estudiante);
 }

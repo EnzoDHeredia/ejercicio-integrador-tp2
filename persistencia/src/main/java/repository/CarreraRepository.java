@@ -39,4 +39,24 @@ public class CarreraRepository{
         return em.createQuery(jpql, EstudiantesInscriptosGraduadosDTO.class).getResultList();
     }
 
+    public List<Carrera> findAllCarreras(){
+        String jpql = "SELECT c FROM Carrera c";
+        return em.createQuery(jpql, Carrera.class).getResultList();
+    }
+
+    public void delete(Carrera carrera){
+        em.getTransaction().begin();
+        em.remove(carrera);
+        em.getTransaction().commit();
+    }
+
+    public void update(Carrera carrera){
+        em.getTransaction().begin();
+        em.merge(carrera);
+        em.getTransaction().commit();
+    }
+
+    public Carrera findCarreraById(int id){
+        return em.find(Carrera.class, id);
+    }
 }

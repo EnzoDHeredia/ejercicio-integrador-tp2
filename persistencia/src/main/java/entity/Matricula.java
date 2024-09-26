@@ -69,5 +69,16 @@ public class Matricula {
     public void setEstudiante(Estudiante estudiante) {
         this.estudiante = estudiante;
     }
+
+    @Override
+    public String toString() {
+        return "Matricula{" +
+                "id=" + id +
+                ", estudiante=" + estudiante +
+                ", carrera=" + carrera +
+                ", fechaInscripcion=" + fechaInscripcion +
+                ", graduado=" + graduado +
+                '}';
+    }
 }
 
