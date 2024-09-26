@@ -12,5 +12,5 @@ public interface ICarreraService {
     List<Carrera> findAllCarreras();
     void delete(Carrera carrera);
     void update(Carrera carrera);
-    Carrera findCarreraById(int id);
+    Carrera findCarreraById(Long id);
 }

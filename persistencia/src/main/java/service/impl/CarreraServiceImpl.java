@@ -47,8 +47,8 @@ public class CarreraServiceImpl implements ICarreraService {
     }
 
     @Override
-    public Carrera findCarreraById(int id) {
-        return repositorio.getCarreraRepository().findCarreraById(id);
+    public Carrera findCarreraById(Long id) {
+        return repositorio.getCarreraRepository().findCarreraById(Math.toIntExact(id));
     }
 
 }

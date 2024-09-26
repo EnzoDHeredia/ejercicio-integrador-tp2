@@ -26,9 +26,9 @@ public class Matricula {
     public Matricula() {
     }
 
-    public Matricula(Boolean graduado, LocalDate fechaInscripcion, Carrera carrera, Estudiante estudiante) {
-        this.graduado = graduado;
-        this.fechaInscripcion = fechaInscripcion;
+    public Matricula(Carrera carrera, Estudiante estudiante) {
+        this.graduado = false;
+        this.fechaInscripcion = LocalDate.now();
         this.carrera = carrera;
         this.estudiante = estudiante;
     }
