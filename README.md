@@ -28,18 +28,22 @@ Este comando iniciará dos contenedores:
 PostgreSQL en el puerto 5432.
 phpPgAdmin en el puerto 8080.
 
-**2.** Inicia sesión en `phpPgAdmin` con las siguientes credenciales (definidas en el archivo `docker-compose.yml`):
+**2.** Accede a phpPgAdmin desde tu navegador:
+
+`http://localhost:8080`
+
+**3.** Inicia sesión en `phpPgAdmin` con las siguientes credenciales (definidas en el archivo `docker-compose.yml`):
 
 - **Usuario phpPgAdmin:** `admin@admin.com`
 - **Contraseña phpPgAdmin:** `admin`
 - **Base de Datos:** `root`
 - **Contraseña de Datos:** `root`
 
-**3.** Dentro de `phpPgAdmin`, selecciona la base de datos y luego navega a la pestaña `SQL` para ejecutar el script de datos de prueba.
+**4.** Dentro de `phpPgAdmin`, selecciona la base de datos y luego navega a la pestaña `SQL` para ejecutar el script de datos de prueba.
 
-**4.** Carga y ejecuta el script ubicado en `scripts/init_data.sql` para llenar la base de datos con datos de prueba. Esto añadirá datos de prueba a las tablas definidas en la base de datos.
+**5.** Carga y ejecuta el script ubicado en `scripts/init_data.sql` para llenar la base de datos con datos de prueba. Esto añadirá datos de prueba a las tablas definidas en la base de datos.
 
-**5.** Verifica que los datos hayan sido cargados correctamente navegando por las tablas en phpPgAdmin.
+**6.** Verifica que los datos hayan sido cargados correctamente navegando por las tablas en phpPgAdmin.
 
 
 ## 📧 Contacto
