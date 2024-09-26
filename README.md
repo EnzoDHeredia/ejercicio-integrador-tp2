@@ -5,13 +5,11 @@
 
 Este proyecto implementa un sistema de gestión utilizando PostgreSQL como base de datos. Se incluyen dos documentos para entender mejor el sistema:
 
-- **DereExt**: 
-  - [PDF](diagramas/dereExt.pdf)
-  - ![DereExt](diagramas/dereExt.jpg)
+- [**DereExt**](diagramas/dereExt.pdf): 
+  ![DereExt](diagramas/dereExt.jpg)
 
-- **Diagrama de Clases**: 
-  - [PDF](diagramas/diagrama_clases.pdf)
-  - ![Diagrama de Clases](diagramas/diagrama_clases.jpg)
+- [**Diagrama de Clases**:](diagramas/diagrama_clases.pdf)
+  ![Diagrama de Clases](diagramas/diagrama_clases.jpg)
 
 El sistema permite gestionar información detallada sobre los diferentes elementos que interactúan en el dominio del problema. 
 
