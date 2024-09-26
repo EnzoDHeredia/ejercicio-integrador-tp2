@@ -1,5 +1,4 @@
-
-# 📄 Ejercicio integrador tp2
+# 📄 Ejercicio Integrador TP2
 
 ## 🗂 Descripción
 
@@ -8,7 +7,7 @@ Este proyecto implementa un sistema de gestión utilizando PostgreSQL como base 
 - [**DereExt**](diagramas/dereExt.pdf): 
   ![DereExt](diagramas/dereExt.jpg)
 
-- [**Diagrama de Clases**:](diagramas/diagrama_clases.pdf)
+- [**Diagrama de Clases**](diagramas/diagrama_clases.pdf):
   ![Diagrama de Clases](diagramas/diagrama_clases.jpg)
 
 El sistema permite gestionar información detallada sobre los diferentes elementos que interactúan en el dominio del problema. 
@@ -19,25 +18,26 @@ Para facilitar la configuración del entorno de desarrollo, utilizamos `docker-c
 
 ### 🚀 Instrucciones de Uso
 
-**1.** Ejecuta el comando docker-compose para iniciar los contenedores:
+**1.** Ejecuta el comando `docker-compose` para iniciar los contenedores:
 
  `docker-compose up `
 
 Este comando iniciará dos contenedores:
 
-PostgreSQL en el puerto 5432.
-phpPgAdmin en el puerto 8080.
+- PostgreSQL en el puerto `5432`.
+- phpPgAdmin en el puerto `8080`.
 
-**2.** Accede a phpPgAdmin desde tu navegador:
+**2.** Accede a phpPgAdmin desde tu navegador y ve a `http://localhost`:
+- Usa las credenciales:
+  - **Email:** `admin@admin.com`
+  - **Contraseña:** `admin`
 
-`http://localhost:8080`
-
-**3.** Inicia sesión en `phpPgAdmin` con las siguientes credenciales (definidas en el archivo `docker-compose.yml`):
-
-- **Usuario phpPgAdmin:** `admin@admin.com`
-- **Contraseña phpPgAdmin:** `admin`
-- **Base de Datos:** `root`
-- **Contraseña de Datos:** `root`
+**3.** Agregar la base de datos:
+- En pgAdmin, tendrás que agregar un nuevo servidor con las siguientes configuraciones:
+  - **Nombre del servidor:** (El que prefieras)
+  - **Host:** `postgres`
+  - **Usuario:** `root`
+  - **Contraseña:** `root`
 
 **4.** Dentro de `phpPgAdmin`, selecciona la base de datos y luego navega a la pestaña `SQL` para ejecutar el script de datos de prueba.
 
